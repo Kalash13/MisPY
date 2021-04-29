@@ -136,7 +136,7 @@ if points == 10:
 
 elif points == 0:
     nota = 1.0
-print(f" Su puntaje es : {points} y su nota es : {nota}")  
+print(f" Su puntaje es : {points} y su nota es : {nota}" )
 
 
 
