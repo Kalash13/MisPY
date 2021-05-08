@@ -1,8 +1,8 @@
 """
-Trabajo de python 
+Trabajo de python
 
 En el trabajo los sistemas pedidos vienen con su titulo,
-para ejecutarlo descomente el codigo  
+para ejecutarlo descomente el codigo 
 
 """
 
@@ -12,7 +12,7 @@ para ejecutarlo descomente el codigo
 """Validacion de edad"""
 # edad = int (input ("Ingrese su edad:  "))
 
-# if edad >= 18: 
+# if edad >= 18:
 #     print("Es mayor de edad ")
 
 # else:
@@ -45,7 +45,7 @@ para ejecutarlo descomente el codigo
 # if promedio >= 4:
 #     print(f"Su promedio es: {promedio:.1f} Felicidades aprobo el ramo " )
 
-# else: 
+# else:
     # print("Usted reprobo el Ramo ")
 
 """Esto es pregunta con puntaje"""
@@ -79,7 +79,7 @@ director= ["a - Quentin Tarantino", "b - Clit Eastwood", "c - Martin Scorsese" ,
 for x in director:
     print(x)
 
-respuesta1 = input("Ingrese su respuesta mediante la letra que corresponda: ")
+respuesta1 = input  Ingrese su respuesta mediante la letra que corresponda:
 points = 0
 
 if respuesta1 == "c":
@@ -87,7 +87,7 @@ if respuesta1 == "c":
     points = (points + 10)
 
 
-else: 
+else:
     print("Respuesta incorrecta")
 
 
@@ -104,7 +104,7 @@ if respuesta2 == "a":
     points = (points + 10)
 
 
-else: 
+else:
     print("Respuesta incorrecta")
 
 
@@ -121,17 +121,17 @@ if respuesta3 == "d":
     points = (points + 10)
 
 
-else: 
+else:
     print("Respuesta incorrecta")
 
 nota = 0
 if points == 30:
-    nota = 7.0 
+    nota = 7.0
 
 if points == 20:
     nota = 4.5
 
-if points == 10: 
+if points == 10:
     nota = 2.7
 
 elif points == 0:
