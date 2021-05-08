@@ -93,8 +93,7 @@ if cliente == "si":
 elif cliente == "no":
     print(f"No se aplica descuento, total a pagar: ${precio}")
     pago = int(input("Ingrese con cuanto cancela: "))
-    pago = (pago - precio)
-    print(f"Su vuelto es : {pago}")
+    calcular_vuelto(pago, precio)
 
 
 
