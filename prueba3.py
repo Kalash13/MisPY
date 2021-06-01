@@ -57,78 +57,89 @@ pp= 14000
 ptc = 16000
 opcion = 0
 contador = 0
-while opcion != 4:
-    print ("Bienvenido a PizzaDuc")
-    print ("1- Menú")
-    print ("2- Pagar")
-    print ("3- Anular pedido")
-    print ("4- Exit")
-    opcion = int(input("Ingrese una opcion: "))
+while opcion != 3:
+    try:
+        print ("Bienvenido a PizzaDuc")
+        print ("1- Menú")
+        print ("2- Pagar")
+        print ("3- Anular pedido")
+        print ("4- Exit")
+        opcion =int(input("Ingrese una opcion: "))
 
-    if opcion == 1:
-        print("Pizzas: \n-Tradicional $12.000 \n-Pepperoni $14.000 \n-Todas las carnes $16.000")
-        pizza = input("Seleccion tus pizzas: ")
-        if pizza == "tradicional":
-            cantidad = int(input("Seleccione cantidad: "))
-            contador= contador + pt *cantidad
-        if pizza == "pepperoni":
-            cantidad = int(input("Seleccione cantidad: "))
-            contador= contador + pp *cantidad
-        if pizza == "todas las carnes":
-            cantidad = int(input("Seleccione cantidad: "))
-            contador= contador + ptc *cantidad
+        if opcion == 1:
+            print("Pizzas: \n-Tradicional $12.000 \n-Pepperoni $14.000 \n-Todas las carnes $16.000")
+            pizza = input("Seleccion tus pizzas: ")
+            if pizza == "tradicional":
+                cantidad = int(input("Seleccione cantidad: "))
+                contador1= contador1 + pt *cantidad
+            if pizza == "pepperoni":
+                cantidad = int(input("Seleccione cantidad: "))
+                contador2= contador2 + pp *cantidad
+            if pizza == "todas las carnes":
+                cantidad = int(input("Seleccione cantidad: "))
+                contador3= contador3 + ptc *cantidad
 
-        total = contador
+            total = contador1 + contador2 + contador3
 
-    if opcion == 2 and True:
-        conv = input("Usted es estudiante diurno ?  s / n : ")
+        if opcion == 2:
+            conv = input("Ustede es estudiante diurno?  s / n : ")
 
-        if conv == "s":
-            convenio = True
-        if conv == "n":
-            convenio = False
+            if conv == "s":
+                convenio = True
+            if conv == "n":
+                convenio = False
 
-        if conv == "s":
-            mul = (total * 0.12)
-            res = (total - mul)
-            print("")
-            print("PizzaDuc")
-            print("--------------------")
-            print(f" {cantidad}  {pizza}  :  {contador}  " )
+            if conv == "s":
+                mul = (total * 0.12)
+                res = (total - mul)
+                print("")
+                print("PizzaDuc")
+                print("--------------------")
+                print(f" {cantidad}  {pizza}  :  {contador}  " )
+                print(f" {cantidad}  {pizza}  :  {contador}  " )
+                print(f" {cantidad}  {pizza}  :  {contador}  " )
 
-            print("---------------------")
-            print(f"Subtotal: {total}")
-            print(f"Descuento: {mul} ")
-            print("----------------------")
+                print("---------------------")
+                print(f"Subtotal: {total}")
+                print(f"Descuento: {mul:.0f} ")
+                print("----------------------")
+                print(f"Total: {res}")
+                print("----------------------")
 
 
 
-            pago =int(input("Ingrese con cuanto va a pagar: "))
-            calcular_vuelto (pago , res)
+                pago =int(input("Ingrese con cuanto va a pagar: "))
+                calcular_vuelto (pago , res)
+
+
+
+            elif  conv == "n":
+                print("")
+                print("PizzaDuc")
+                print("---------------------")
+                print(f" {cantidad}  {pizza}  :  {contador}  " )
+
+                print("---------------------")
+                print(f"Subtotal: {total}")
+                print("Descuento: 0 ")
+                print("----------------------")
+                print(f"Total: {total}")
+                print("----------------------")
+                pago = int(input("Ingrese con cuanto cancela: "))
+                calcular_vuelto(pago ,total)
+
+
+
+        if opcion == 3:
+            print("Se anulado la compra o no hay productos agregados")
+
+
+
+        if opcion == 4:
             break
-
-        elif  conv == "n":
-            print("")
-            print("PizzaDuc")
-            print("---------------------")
-            print(f" {cantidad}  {pizza}  :  {contador}  " )
-
-            print("---------------------")
-            print(f"Subtotal: {total}")
-            print("Descuento: 0 ")
-            print("----------------------")
-            print(f"Total: {total}")
-            print("----------------------")
-            pago = int(input("Ingrese con cuanto cancela: "))
-            calcular_vuelto(pago ,total)
-            break
-
-
-
-    if opcion == 3:
-        print("Se anulado la compra o no hay productos agregados")
-
-
-
-    if opcion == 4:
-        break
+        elif opcion > 4:
+            print("----------------------------")
+            print("ERROR : Ingrese una opcion valida")
+            print("----------------------------")
+    except :
+        print("Error")
